@@ -2,6 +2,13 @@
 This is an app similar to Amazon, using an SQL database. This is a command line Node.js app utilizing MySQL database storage. 
 Bamazon Takes orders from customers and depletes inventory from "stores" stock. 
 
+The following NPM Packages are installed to run this app:
+
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [inquirer](https://www.npmjs.com/package/inquirer)
+* [mysql](https://www.npmjs.com/package/mysql)
+* [table](https://www.npmjs.com/package/table)
+
 ### Customer View Function
 * I created a MySQL Database called `bamazon`
 * Then created a Table inside of that database called `products`.
