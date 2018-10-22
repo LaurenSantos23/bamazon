@@ -34,3 +34,9 @@ I then populated the Bamazon database with 10 different products "for sale"
  
   * When a customer places a order, the SQL database is updated to reflect the remaining quantity.
   * Once the update goes through the total price will then be displayed to the customer.
+  
+  ### Screenshots will go here
+  
+  ### Link to Video Walkthrough will go here
+  
+  ###
