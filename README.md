@@ -1,6 +1,6 @@
 # Bamazon Overview
-This is an app similar to Amazon, using an SQL database. This is a command line Node.js app utilizing MySQL database storage. 
-Bamazon Takes orders from customers and depletes inventory from "stores" stock. 
+This is a CLI app similar to Amazon, using an SQL database. This is a command line Node.js app utilizing MySQL database storage. 
+Bamazon takes orders from customers and depletes inventory from "stores" stock, simulating an online storefront. 
 
 The following NPM Packages are installed to run this app:
 
