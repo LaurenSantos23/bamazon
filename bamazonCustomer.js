@@ -16,7 +16,7 @@ connection.connect(function(err){
     }
     else console.log("It's working!");
     //change else console.log its working to run the purchase function 
-})
+});
 
 // display all of the items available for sale 
 //Include the ids, names, and prices of products for sale
