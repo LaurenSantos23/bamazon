@@ -9,9 +9,9 @@ The following NPM Packages are installed to run this app:
 * [mysql](https://www.npmjs.com/package/mysql)
 * [table](https://www.npmjs.com/package/table)
 
-### Customer View Function
-* I created a MySQL Database called `bamazon`
-* Then created a Table inside of that database called `products`.
+### Customer View Function Overview
+ In order for this application to function properly, I used mySQL to create a database to keep all of the store's inventory, which I called `bamazon`. I then created a Table inside of that database called `products`.
+
 * The products table has each of the following columns:
 
    * item_id (unique id for each product)
