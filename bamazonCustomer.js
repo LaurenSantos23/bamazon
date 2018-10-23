@@ -99,6 +99,7 @@ const buyStuff = function(howManyLeft, itId) {
 const customerTotal = function(itId, custQuantity) {
     connection.query("SELECT stock_quantity, price FROM products WHERE item_id = ?", [itId], function(err, res){
         if (err) throw err;
+        //if purchase is successful, then display the price to customer and end connection 
         console.log(res[0].price);
         console.log("Total"+ res[0].price * custQuantity);
     })
