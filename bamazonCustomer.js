@@ -20,7 +20,7 @@ connection.connect(function(err){
     console.log('-----------------------------------------------');
     console.log("--------Here is our current inventory----------");
     console.log("-----------------------------------------------");
-    start();
+    showInventory();
 });
 
 // display all of the items available for sale 
