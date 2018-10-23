@@ -66,7 +66,7 @@ function customerOrder() {
             //console.log("There was an error processing your purchase")
             //App needs to check database to see if there is enough product to meet customers request
             if (res[0].stock_quantity < userSelection.quantityChoice) {
-                console.log("Insufficient Quantity!")
+                console.log("Insufficient Quantity! We need to restock that item, check back soon!")
                 //if not console.log "Insufficient quantity" prevent order from going through
             }
             else {
@@ -76,15 +76,33 @@ function customerOrder() {
                 const updateStock = res[0].stock_quantity - userSelection.quantityChoice;
                 const userCheckout = userSelection.quantityChoice;
                 // Once the update goes through, show the customer the total cost of their purchase.
-                buyStuff(difference, item);//need to build function for this
+                buyStuff(howManyLeft, itId);//need to build function for this
                 showTotal(item, userCheckout);//need to build function for this
             }
         })
     })
 }
+// this function updates the SQL database 
+const buyStuff = function(howManyLeft, itId) {
+    connection.query("UPDATE products SET ? WHERE ?",
+    [
+        {
+            stock_quantity: howManyLeft
+        },
+        {
+            item_id: itId
+        }
+    ])
 
-//const buyStuff = function()
+}
+// this function will display the total cost of the items user selected and then end the sale 
+const customerTotal = function(itId, custQuantity) {
+    connection.query("SELECT stock_quantity, price FROM products WHERE item_id = ?", [itId], function(err, res){
+        if (err) throw err;
+        console.log(res[0].price);
+        console.log("Total"+ res[0].price * custQuantity);
+    })
+    conncection.end();
+}
 
-//const showTotal = function()
-
-//only the table with the current inventory is showing, my prompts are not showing up 
+// 
