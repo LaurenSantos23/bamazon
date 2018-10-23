@@ -79,3 +79,5 @@ function customerOrder() {
 //var buyStuff = function()
 
 //var showTotal = function()
+
+//only the table with the current inventory is showing, my prompts are not showing up 
