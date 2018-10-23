@@ -21,11 +21,10 @@ connection.connect(function(err){
     console.log("--------Here is our current inventory----------");
     console.log("-----------------------------------------------");
     start();
-    //change else console.log its working to run the purchase function 
 });
 
 // display all of the items available for sale 
-function start(){
+function showInventory(){
     // prints items for sale and their details
     connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err; 
