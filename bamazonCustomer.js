@@ -16,12 +16,12 @@ connection.connect(function(err){
         //console.log("There is an error");
     }
     console.log("-----------------------------------------------")
-    console.log("------------Welcome to Bamazon!!---------------");
-    console.log('-----------------------------------------------');
-    console.log("--------Here is our current inventory----------");
-    console.log("-----------------------------------------------");
+    console.log("------------Welcome to Bamazon!!---------------")
+    console.log('-----------------------------------------------')
+    console.log("--------Here is our current inventory----------")
+    console.log("-----------------------------------------------")
     showInventory();
-    customerOrder();
+    //customerOrder();
 });
 
 // display all of the items available for sale 
@@ -29,12 +29,13 @@ function showInventory(){
     // prints items for sale and their details
     connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err; 
-        console.log("-----------------------------------------")
-        console.log("-----------------------------------------")
-        
+        console.log("-----------------------------------------------")
+        console.log("-----------------------------------------------")
         console.table(res);
-        console.log("-----------------------------------------")
-        console.log("-----------------------------------------")
+        console.log("-----------------------------------------------")
+        console.log("-----------------------------------------------")
+
+        customerOrder();
     //Include the ids, names, and prices of products for sale
     }
 )}  
