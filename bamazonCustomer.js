@@ -1,6 +1,7 @@
 const mySQL = require("mysql");
 const inquirer = require("inquirer");
-const Table = require('cli-table');
+const table = require("console.table");
+
 
 const connection = mySQL.createConnection({
   host: "localhost",
@@ -8,47 +9,26 @@ const connection = mySQL.createConnection({
   user: "root",
   password: "password", 
   database: "bamazon"
-});
+})
 connection.connect(function(err){
-    if (err) throw err;
-
-    showInventory();
-        //console.log(err);
+    if (err){
+       // console.log(err);
         //console.log("There is an error");
-    //}
-    //else console.log("It's working!");
-    
+    }
+   // else console.log("It's working!");
+    //change else console.log its working to run the purchase function 
 });
 
-function showInventory(){
 // display all of the items available for sale 
-connection.query('SELECT * FROM products', function(err, res){
-    if(err) throw err;
-console.log("Welcome to Bamazon!");
-console.log("-------------------------------");
-
-
-//create a table for the information from the bamazon mysql database to be placed
-const table = new Table({
-	head: ['item_id', 'product_name','price'],
-	style: {
-	head: ['blue'],
-	compact: false,
-	colAligns: ['center'],
-		}
-	});   
-});
-
-for(var i = 0; i < res.length; i++){
-    table.push(
-        [res[i].item-id, res[i].product_name, res[i].price]
-    );
-}
-console.log(table.toString());
-
-purchase();
-};
-
+function start(){
+    // prints items for sale and their details
+    connection.query('SELECT * FROM products', function(err, res){
+        if(err) throw err; 
+    
+    console.log('<<<<<<<<<<<---Welcome to BAMazon--->>>>>>>>>>>')
+    console.log('----------------------------------------------')
+    }
+  
 //Include the ids, names, and prices of products for sale
 
 //The app should then prompt users with two messages.
@@ -63,4 +43,3 @@ purchase();
 // Once the update goes through, show the customer the total cost of their purchase.
 
 //console.table to display data from database
-
