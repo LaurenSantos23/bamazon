@@ -77,7 +77,7 @@ function customerOrder() {
                 const userCheckout = userSelection.quantityChoice;
                 // Once the update goes through, show the customer the total cost of their purchase.
                 buyStuff(howManyLeft, itId);
-                showTotal(item, userCheckout);
+                customerTotal(item, userCheckout);
             }
         })
     })
