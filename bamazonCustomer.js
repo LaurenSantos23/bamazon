@@ -76,8 +76,8 @@ function customerOrder() {
                 const updateStock = res[0].stock_quantity - userSelection.quantityChoice;
                 const userCheckout = userSelection.quantityChoice;
                 // Once the update goes through, show the customer the total cost of their purchase.
-                buyStuff(howManyLeft, itId);//need to build function for this
-                showTotal(item, userCheckout);//need to build function for this
+                buyStuff(howManyLeft, itId);
+                showTotal(item, userCheckout);
             }
         })
     })
