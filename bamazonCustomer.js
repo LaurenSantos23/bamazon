@@ -15,8 +15,11 @@ connection.connect(function(err){
        // console.log(err);
         //console.log("There is an error");
     }
-    console.log("Welcome to Bamazon!!");
-    console.log('----------------------------------------------');
+    console.log("-----------------------------------------------")
+    console.log("------------Welcome to Bamazon!!---------------");
+    console.log('-----------------------------------------------');
+    console.log("--------Here is our current inventory----------");
+    console.log("-----------------------------------------------");
     start();
     //change else console.log its working to run the purchase function 
 });
