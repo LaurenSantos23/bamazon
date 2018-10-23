@@ -15,7 +15,9 @@ connection.connect(function(err){
        // console.log(err);
         //console.log("There is an error");
     }
-   // else console.log("It's working!");
+    console.log("Welcome to Bamazon!!");
+    console.log('----------------------------------------------');
+    start();
     //change else console.log its working to run the purchase function 
 });
 
@@ -24,9 +26,8 @@ function start(){
     // prints items for sale and their details
     connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err; 
+        console.table(res);
     
-    console.log('<<<<<<<<<<<---Welcome to BAMazon--->>>>>>>>>>>')
-    console.log('----------------------------------------------')
     }
   
 //Include the ids, names, and prices of products for sale
