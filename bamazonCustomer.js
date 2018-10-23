@@ -52,7 +52,7 @@ function customerOrder() {
       }
     ])
     .then(function(userSelection) {
-        var item = userSelection.idChoice;
+        const item = userSelection.idChoice;
         connection.query("SELECT item_id, stock_quantity, price FROM products WHERE item_id = ?", [item], function(err, res){
             if (err) throw err;
             //console.log(err)
@@ -66,8 +66,8 @@ function customerOrder() {
                 //if enough product, fulfill customers order
                 console.log(res);
                 // This means updating the SQL database to reflect the remaining quantity.
-                var updateStock = res[0].stock_quantity - userSelection.quantity_choice;
-                var userCheckout = userSelection.quantity_choice;
+                const updateStock = res[0].stock_quantity - userSelection.quantity_choice;
+                const userCheckout = userSelection.quantity_choice;
                 // Once the update goes through, show the customer the total cost of their purchase.
                 buyStuff(difference, item);//need to build function for this
                 showTotal(item, userCheckout);//need to build function for this
@@ -76,8 +76,8 @@ function customerOrder() {
     })
 }
 
-//var buyStuff = function()
+//const buyStuff = function()
 
-//var showTotal = function()
+//const showTotal = function()
 
 //only the table with the current inventory is showing, my prompts are not showing up 
