@@ -42,4 +42,4 @@ function start(){
 // This means updating the SQL database to reflect the remaining quantity.
 // Once the update goes through, show the customer the total cost of their purchase.
 
-//console.table to display data from database
+)}//console.table to display data from database
