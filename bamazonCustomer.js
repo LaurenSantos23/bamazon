@@ -21,6 +21,7 @@ connection.connect(function(err){
     console.log("--------Here is our current inventory----------");
     console.log("-----------------------------------------------");
     showInventory();
+    customerOrder();
 });
 
 // display all of the items available for sale 
@@ -28,7 +29,11 @@ function showInventory(){
     // prints items for sale and their details
     connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err; 
+        console.log("-----------------------------------------")
+        console.log("-----------------------------------------")
         console.table(res);
+        console.log("-----------------------------------------")
+        console.log("-----------------------------------------")
     //Include the ids, names, and prices of products for sale
     }
 )}  
@@ -41,7 +46,7 @@ function customerOrder() {
     inquirer.prompt([
       {
         name: "idChoice",
-        type:"list",
+        type:"choices",
         message:"Please input the ID of the product you would like to purchase.",
         selections:["1","2", "3", "4", "5", "6", "7","8", "9", "10"]
       },
@@ -58,7 +63,7 @@ function customerOrder() {
             //console.log(err)
             //console.log("There was an error processing your purchase")
             //App needs to check database to see if there is enough product to meet customers request
-            if (res[0].stock_quantity < userSelection.quantity_choice) {
+            if (res[0].stock_quantity < userSelection.quantityChoice) {
                 console.log("Insufficient Quantity!")
                 //if not console.log "Insufficient quantity" prevent order from going through
             }
@@ -66,8 +71,8 @@ function customerOrder() {
                 //if enough product, fulfill customers order
                 console.log(res);
                 // This means updating the SQL database to reflect the remaining quantity.
-                const updateStock = res[0].stock_quantity - userSelection.quantity_choice;
-                const userCheckout = userSelection.quantity_choice;
+                const updateStock = res[0].stock_quantity - userSelection.quantityChoice;
+                const userCheckout = userSelection.quantityChoice;
                 // Once the update goes through, show the customer the total cost of their purchase.
                 buyStuff(difference, item);//need to build function for this
                 showTotal(item, userCheckout);//need to build function for this
