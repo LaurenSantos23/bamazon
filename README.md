@@ -45,14 +45,21 @@ I then populated the Bamazon database with 10 different products "for sale"
 
 * Example for node bamazonCustomer.js 'Welcome to Bamazon!'
 
-![Welcome to Bamazon](img/bamazon-intro.png)
+![Welcome to Bamazon Screenshot](img/bamazon-intro.png)
 
 * Example of Customer Total Display
 
-![Spotify This Song Default Screenshot](img/bamazon-customer-total.png)
+![Bamazon Customer Total Screenshot](img/bamazon-customer-total.png)
 
   
   ### Link to Video Walkthrough will go here
   
   ### Link to Deployed Bamazon Github Application
    https://laurensantos23.github.io/bamazon/
+   
+   
+   
+   
+   
+   
+   
