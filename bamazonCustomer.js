@@ -106,4 +106,3 @@ const customerTotal = function(itId, custQuantity) {
     connection.end();
 }
 
-// 

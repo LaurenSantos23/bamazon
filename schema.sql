@@ -26,3 +26,4 @@ VALUES ("Monstera Plant","Garden",75.00, 25),
     ("Antique French Wardrobe", "Furniture", 750.00, 5 ),
     ("Antique Victorian Silver Candle Holder (2 in set)", "Home Decor", 350.00, 20),
     ("Vintage Silk Screen Japanese Room Divider", "Home Decor", 1500.00, 5);
+
