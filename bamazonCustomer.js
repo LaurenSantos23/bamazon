@@ -71,7 +71,7 @@ function customerOrder() {
             }
             else {
                 //if enough product, fulfill customers order
-                console.log(res);
+               
                 // This means updating the SQL database to reflect the remaining quantity.
                 const updateStock = res[0].stock_quantity - userSelection.quantityChoice;
                 const userCheckout = userSelection.quantityChoice;
