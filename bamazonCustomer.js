@@ -100,7 +100,7 @@ const customerTotal = function(itId, custQuantity) {
     connection.query("SELECT stock_quantity, price FROM products WHERE item_id = ?", [itId], function(err, res){
         if (err) throw err;
         //if purchase is successful, then display the price to customer and end connection 
-        console.log(res[0].price);
+        //console.log(res[0].price);
         console.log("Thank you! Your total is: $" + res[0].price * custQuantity);
     })
     connection.end();
