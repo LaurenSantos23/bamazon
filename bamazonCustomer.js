@@ -101,9 +101,9 @@ const customerTotal = function(itId, custQuantity) {
         if (err) throw err;
         //if purchase is successful, then display the price to customer and end connection 
         console.log(res[0].price);
-        console.log("Total" + res[0].price * custQuantity);
+        console.log("Thank you! Your total is: $" + res[0].price * custQuantity);
     })
-    conncection.end();
+    connection.end();
 }
 
 // 
