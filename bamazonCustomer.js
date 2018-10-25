@@ -76,18 +76,18 @@ function customerOrder() {
                 const updateStock = res[0].stock_quantity - userSelection.quantityChoice;
                 const userCheckout = userSelection.quantityChoice;
                 // Once the update goes through, show the customer the total cost of their purchase.
-                buyStuff(howManyLeft, itId);
+                buyStuff(updateStock, item);
                 customerTotal(item, userCheckout);
             }
         })
     })
 }
 // this function updates the SQL database 
-const buyStuff = function(howManyLeft, itId) {
+const buyStuff = function(updateStock, itId) {
     connection.query("UPDATE products SET ? WHERE ?",
     [
         {
-            stock_quantity: howManyLeft
+            stock_quantity: updateStock
         },
         {
             item_id: itId
@@ -101,7 +101,7 @@ const customerTotal = function(itId, custQuantity) {
         if (err) throw err;
         //if purchase is successful, then display the price to customer and end connection 
         console.log(res[0].price);
-        console.log("Total"+ res[0].price * custQuantity);
+        console.log("Total" + res[0].price * custQuantity);
     })
     conncection.end();
 }
