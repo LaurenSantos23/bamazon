@@ -41,9 +41,25 @@ I then populated the Bamazon database with 10 different products "for sale"
   * When a customer places a order, the SQL database is updated to reflect the remaining quantity.
   * Once the update goes through the total price will then be displayed to the customer.
   
-  ### Screenshots will go here
+  ### Screenshots of Code (Working Examples)
+
+* Example for node bamazonCustomer.js 'Welcome to Bamazon!'
+
+![Welcome to Bamazon Screenshot](img/bamazon-intro.png)
+
+* Example of Customer Total Display
+
+![Bamazon Customer Total Screenshot](img/bamazon-customer-total.png)
+
   
   ### Link to Video Walkthrough will go here
   
   ### Link to Deployed Bamazon Github Application
    https://laurensantos23.github.io/bamazon/
+   
+   
+   
+   
+   
+   
+   
